@@ -1,0 +1,392 @@
+/* 
+  Estética propositalmente antiquada:
+  cores duras, excesso de bordas, fontes comuns e aparência burocrática.
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #e6e6e6;
+  color: #1a1a1a;
+}
+
+.flag-strip {
+  height: 8px;
+  background: linear-gradient(
+    to right,
+    #009739 33%,
+    #ffdf00 33%,
+    #ffdf00 66%,
+    #002776 66%
+  );
+}
+
+/* Faixa superior rosa claro com texto branco: contraste ruim de propósito */
+.top-bar {
+  background: #ffdff1;
+  color: white;
+  border-bottom: 5px solid #ffdf00;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 30px;
+  align-items: center;
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.header-content p {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: white;
+}
+
+.session-box {
+  background: #ffeaf5;
+  border: 2px solid white;
+  padding: 12px;
+  text-align: center;
+  min-width: 160px;
+  color: white;
+}
+
+/* Menu antigo com sensação de portal legado */
+.old-menu {
+  background: #d0d0d0;
+  border-bottom: 1px solid #777;
+  padding: 8px 30px;
+}
+
+.old-menu a {
+  color: #003399;
+  text-decoration: underline;
+  margin-right: 18px;
+  font-size: 14px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 20px;
+  max-width: 1180px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.sidebar {
+  background: #f8f8f8;
+  border: 1px solid #888;
+  padding: 15px;
+  height: fit-content;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #003399;
+  border-bottom: 1px solid #999;
+  padding-bottom: 8px;
+}
+
+.sidebar ul {
+  padding-left: 18px;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+  color: #003399;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.notice {
+  background: #fff8c4;
+  border: 1px solid #9f8f00;
+  padding: 10px;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.content {
+  background: white;
+  border: 1px solid #777;
+  padding: 20px;
+  min-height: 600px;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.progress-area {
+  background: #f1f1f1;
+  border: 1px solid #aaa;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.progress-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.progress-track {
+  height: 22px;
+  background: #c5c5c5;
+  border: 1px solid #555;
+  overflow: hidden;
+}
+
+/* Barra de progresso vermelha para aumentar a sensação de alerta e confusão */
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    #d40000,
+    #d40000 10px,
+    #a80000 10px,
+    #a80000 20px
+  );
+  transition: width 0.4s ease;
+}
+
+.step-box h2 {
+  color: #0b3d91;
+  margin-bottom: 5px;
+}
+
+.step-description {
+  background: #eef3ff;
+  border: 1px solid #9db2dd;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+  padding: 9px;
+  border: 1px solid #777;
+  font-size: 14px;
+  background: #fffffb;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.required-late {
+  color: #b00000;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+/* Campos só parecem obrigatórios depois do erro, uma má prática proposital */
+.field.invalid input,
+.field.invalid select,
+.field.invalid textarea {
+  border: 2px solid #b00000;
+  background: #fff0f0;
+}
+
+.error-box {
+  margin-top: 18px;
+  background: #f7d7d7;
+  border: 2px solid #a40000;
+  color: #640000;
+  padding: 12px;
+  font-weight: bold;
+}
+
+/* Mensagem vaga e irritante */
+.error-box::before {
+  content: "Ocorrência não especificada: ";
+}
+
+.hidden {
+  display: none;
+}
+
+.buttons {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  min-height: 55px;
+}
+
+button {
+  cursor: pointer;
+  border: 2px solid #222;
+  font-weight: bold;
+}
+
+/* 
+  Botões com cores propositalmente estranhas e fora do padrão governamental.
+  Isso quebra a expectativa visual do usuário dentro de um portal público.
+*/
+.primary-btn {
+  background: #ff4fd8;
+  color: #111;
+  padding: 12px 28px;
+  box-shadow: 3px 3px 0 #6cff00;
+}
+
+.secondary-btn {
+  background: #39ff14;
+  color: #2b0033;
+  padding: 12px 28px;
+  box-shadow: 3px 3px 0 #ff4fd8;
+}
+
+/* Botão "Próximo" se move levemente para irritar sem impedir uso */
+.primary-btn.shift-one {
+  transform: translateX(-18px);
+}
+
+.primary-btn.shift-two {
+  transform: translateY(12px);
+}
+
+.primary-btn.shift-three {
+  transform: translate(-12px, -8px);
+}
+
+/* Checkbox obrigatório escondido próximo ao final da página */
+.hidden-consent-area {
+  margin-top: 160px;
+  padding: 8px;
+  font-size: 12px;
+  color: #333;
+  background: #fafafa;
+  border: 1px dashed #aaa;
+}
+
+.hidden-consent-area label {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.final-message {
+  background: #eef7ee;
+  border: 2px solid #4a8f4a;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.protocol {
+  font-size: 22px;
+  color: #0b3d91;
+  font-weight: bold;
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup-card {
+  background: white;
+  border: 4px solid #0b3d91;
+  max-width: 420px;
+  padding: 20px;
+  box-shadow: 0 0 0 6px #ffdf00;
+}
+
+.popup-card h3 {
+  margin-top: 0;
+  color: #0b3d91;
+}
+
+.popup-card button {
+  background: #0b3d91;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  color: #555;
+}
+
+/* Layout responsivo, mas ainda visualmente desconfortável */
+@media (max-width: 780px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .old-menu a {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .buttons {
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+}

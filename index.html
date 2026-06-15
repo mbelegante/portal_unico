@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal Único do Cidadão Brasileiro</title>
+
+  <!-- CSS agora está dentro da pasta css -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Visual propositalmente inspirado em portais governamentais antigos -->
+  <header class="top-bar">
+    <div class="flag-strip"></div>
+    <div class="header-content">
+      <div>
+        <h1>Portal Único do Cidadão Brasileiro</h1>
+        <p>Sistema Nacional Integrado de Solicitação Assistencial Temporária</p>
+      </div>
+
+      <!-- Temporizador fictício para criar pressão desnecessária -->
+      <div class="session-box">
+        Sessão expira em:
+        <strong id="sessionTimer">09:59</strong>
+      </div>
+    </div>
+  </header>
+
+  <nav class="old-menu">
+    <a href="#">Início</a>
+    <a href="#">Serviços</a>
+    <a href="#">Transparência</a>
+    <a href="#">Acesso Restrito</a>
+    <a href="#">Ajuda</a>
+  </nav>
+
+  <main class="container">
+    <aside class="sidebar">
+      <h2>Menu do Cidadão</h2>
+      <ul>
+        <li>Solicitar benefício</li>
+        <li>Consultar protocolo</li>
+        <li>Regularizar pendência</li>
+        <li>Validar cadastro</li>
+        <li>Atualizar declaração</li>
+      </ul>
+
+      <div class="notice">
+        <strong>Aviso:</strong>
+        Este serviço pode exigir informações complementares não informadas previamente.
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="breadcrumb">
+        Página inicial &gt; Serviços &gt; Assistência social &gt; Solicitação temporária &gt; Continuação
+      </div>
+
+      <div class="progress-area">
+        <div class="progress-title">
+          <span>Progresso da solicitação</span>
+          <strong id="progressText">0%</strong>
+        </div>
+
+        <!-- Barra de progresso enganosa controlada pelo JavaScript -->
+        <div class="progress-track">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+
+        <small>
+          O percentual exibido pode variar conforme validação sistêmica interministerial.
+        </small>
+      </div>
+
+      <form id="benefitForm" novalidate>
+        <div id="stepContent"></div>
+
+        <div id="errorBox" class="error-box hidden"></div>
+
+        <div class="buttons">
+          <!-- Botão voltar apaga dados da etapa atual de propósito -->
+          <button type="button" id="backBtn" class="secondary-btn">Voltar</button>
+
+          <!-- Botão próximo muda de posição em algumas etapas -->
+          <button type="button" id="nextBtn" class="primary-btn">Próximo</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pop-up aleatório para interromper o usuário durante o preenchimento -->
+  <div id="randomPopup" class="popup hidden">
+    <div class="popup-card">
+      <h3>Comunicado Importante</h3>
+      <p id="popupText"></p>
+      <button id="closePopup">Estou ciente, mesmo sem entender</button>
+    </div>
+  </div>
+
+  <footer>
+    Portal fictício criado para demonstração de péssima experiência do usuário.
+  </footer>
+
+  <!-- JavaScript agora está dentro da pasta js -->
+  <script src="js/script.js"></script>
+</body>
+</html>

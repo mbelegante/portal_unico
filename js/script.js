@@ -522,15 +522,20 @@ function showFinalMessage() {
 
   /*
     Confirmação final ambígua:
-    gera protocolo, mas não deixa claro se o benefício foi aprovado,
-    enviado, recebido ou apenas pré-registrado.
+    agora inclui a frase exigida pelo desafio, mas mantém o tom burocrático e confuso.
   */
   stepContent.innerHTML = `
     <div class="final-message">
-      <h2>Manifestação registrada em ambiente de pré-processamento</h2>
+      <h2>Parabéns, você chegou ao final da pior experiência de usuário</h2>
 
       <p>
-        Seu registro foi incluído na fila de verificação preliminar do Portal Único do Cidadão Brasileiro.
+        Sua manifestação foi registrada em ambiente de pré-processamento administrativo não conclusivo.
+      </p>
+
+      <p>
+        Depois de enfrentar navegação confusa, botões contraditórios, mensagens vagas,
+        campos escondidos, pop-ups inoportunos e uma barra de progresso enganosa,
+        você finalmente chegou ao fim.
       </p>
 
       <p class="protocol">${protocol}</p>
@@ -546,7 +551,8 @@ function showFinalMessage() {
       </p>
 
       <p>
-        Situação atual: <strong>processável sob condição administrativa pendente de classificação.</strong>
+        Situação atual:
+        <strong>processável sob condição administrativa pendente de classificação.</strong>
       </p>
     </div>
   `;

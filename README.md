@@ -13,7 +13,7 @@ Portal governamental fictício criado para demonstrar, de forma proposital, uma 
 
 Acesse em:
 
-[Coloque aqui o link do projeto publicado]
+https://mbelegante.github.io/portal_unico/
 
 ## Como testar
 

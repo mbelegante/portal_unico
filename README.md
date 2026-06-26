@@ -9,6 +9,12 @@ Portal governamental fictício criado para demonstrar, de forma proposital, uma 
 * Curso/Turma: Análise e Desenvolvimento de Sistemas - 6º período
 * Categoria: Desafio Pior Experiência de Usuário
 
+## Link do pitch
+
+Acesse em:
+
+https://canva.link/b7q0f1x2ka4t269
+
 ## Link do MVP
 
 Acesse em:
